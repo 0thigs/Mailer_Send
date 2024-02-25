@@ -13,20 +13,20 @@
   <form action="" method="post" enctype="multipart/form-data">
     {{ form.csrf_token }}
 
-    {{ form.email.label() }}
-    {{ form.email() }}
+    {{ form.email.label(for="Email") }}
+    {{ form.email(required=True, placeholder="Digite seu e-mail") }}
 
-    {{ form.password.label() }}
-    {{ form.password() }}
+    {{ form.password.label(for="Senha") }}
+    {{ form.password(required=True, placeholder="Digite sua senha") }}
 
-    {{ form.subject.label() }}
-    {{ form.subject() }}
+    {{ form.subject.label(for="subject") }}
+    {{ form.subject(required=True, placeholder="Digite o assunto") }}
 
-    {{ form.body.label() }}
-    {{ form.body() }}
+    {{ form.body.label(for="body") }}
+    {{ form.body(required=True, placeholder="Digite o corpo da mensagem", maxlength=500) }}
 
-    {{ form.attachment.label() }}
-    {{ form.attachment() }}
+    {{ form.attachment.label(for="attachment") }}
+    {{ form.attachment(accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png") }}
 
     {{ form.submit_button() }}
   </form>

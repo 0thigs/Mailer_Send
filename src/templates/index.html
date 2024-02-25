@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mail Sender</title>
+</head>
+
+<body>
+  <h1>Mail Sender</h1>
+
+  <form action="" method="post" enctype="multipart/form-data">
+    {{ form.csrf_token }}
+
+    {{ form.email.label() }}
+    {{ form.email() }}
+
+    {{ form.password.label() }}
+    {{ form.password() }}
+
+    {{ form.subject.label() }}
+    {{ form.subject() }}
+
+    {{ form.body.label() }}
+    {{ form.body() }}
+
+    {{ form.attachment.label() }}
+    {{ form.attachment() }}
+
+    {{ form.submit_button() }}
+  </form>
+</body>
+
+</html>

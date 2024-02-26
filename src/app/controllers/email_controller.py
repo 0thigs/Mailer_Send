@@ -44,14 +44,14 @@ class EmailController:
         for receiver_email in emailsTeste:  # trocar `emailsTeste` pela lista `emails`!
             message = MIMEMultipart()
             message["From"] = payload["email"]
-            message["To"] = ",".join(emailsTeste)
+            message["To"] = receiver_email
             message["Subject"] = payload["subject"]
 
             message.attach(MIMEText(payload["body"], "html"))
 
             # Adicionar anexo ao e-mail
-            # filename = "curriculo.pdf"  # Nome do arquivo PDF a ser anexado
-            adicionar_anexo(message, "curriculo.pdf")
+            # filename = "curriculo.pdf"  # Nome do arquivo P DF a ser anexado
+            adicionar_anexo(message, payload["attachment"])
 
             # Converter a mensagem para string
             text = message.as_string()
@@ -63,4 +63,5 @@ class EmailController:
                 server.sendmail(payload["email"], receiver_email, text)
 
         os.remove(payload["attachment"])
+        print(payload)
         print("E-mails enviados com sucesso!")

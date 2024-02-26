@@ -18,13 +18,13 @@
     {{ form.email(required=True, placeholder="Digite seu e-mail") }}
 
     {{ form.password.label(for="Senha") }}
-    {{ form.password(required=True, placeholder="Digite sua senha") }}
+    {{ form.password(required=True, placeholder="Senha App Password (Com espaços)") }}
 
     {{ form.subject.label(for="subject") }}
     {{ form.subject(required=True, placeholder="Digite o assunto") }}
 
     {{ form.body.label(for="body") }}
-    {{ form.body(required=True, placeholder="Digite o corpo da mensagem", maxlength=500) }}
+    {{ form.body(required=True, placeholder="Digite o corpo da mensagem", maxlength=600) }}
 
     {{ form.attachment.label(for="attachment") }}
     {{ form.attachment(accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png") }}

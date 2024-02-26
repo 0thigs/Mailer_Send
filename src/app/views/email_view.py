@@ -38,6 +38,8 @@ class EmailView:
             "attachment": path,
         }
 
+        print(payload)
+
         emailController = EmailController()
 
         emailController.send(payload)

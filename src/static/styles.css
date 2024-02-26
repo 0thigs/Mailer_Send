@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Rubik", sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -31,7 +33,7 @@ body {
   }
   
   label {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   
   input[type="text"],
@@ -62,24 +64,34 @@ body {
   
   input[type="file"] {
     margin-bottom: 20px;
-  }
-  
-  input[type="submit"] {
-    font-family: arial;
-    font-weight: bold;
+    font-family: "Rubik", sans-serif;
     color: #FFFFFF;
     font-size: 13px;
     box-shadow: 1px 1px 10px #5D6F7A;
     padding: 10px 16px;
     border-radius: 10px;
     border: none;
-    background: #AC82FF;
-    background: linear-gradient(to top, #AC82FF, #9176CF);
+    background: #7A1CFF;
     cursor: pointer;
     transition: .3s ease;
   }
 
-  input[type="submit"]:hover {
-    background: #672E69;
-    background: linear-gradient(to top, #8a82ff, #9176CF);
+  input[type="submit"] {
+    font-family: "Rubik", sans-serif;
+    color: #FFFFFF;
+    font-size: 13px;
+    box-shadow: 1px 1px 10px #5D6F7A;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: none;
+    background: #7A1CFF;
+    cursor: pointer;
+    transition: .3s ease;
   }
+
+  input[type="file"]:hover, input[type="submit"]:hover {
+    background: #9346ff;
+  }
+  
+
+  

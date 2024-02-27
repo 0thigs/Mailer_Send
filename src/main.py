@@ -7,4 +7,4 @@ if __name__ == "__main__":
     views.init(app)
 
     app.config["SECRET_KEY"] = "3038cd18-e471-46a7-bf8e-a197c5359608"
-    app.run(debug=True, port=8005)
+    app.run(debug=True, port=8001)
